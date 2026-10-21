@@ -1,0 +1,115 @@
+.footer {
+  background-color: var(--bg-light, #1a1a1a);
+  color: var(--text-light, #ffffff);
+  padding: 48px 24px 20px;
+  border-top: 1px solid var(--border, #2e303a);
+  font-family: var(--sans, sans-serif);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+.techfinity-logo-footer {
+  margin-bottom: 16px;
+  height: 60px;
+  width: auto;
+}
+
+.footer-col-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: start;
+  width: 25vw;
+}
+
+.footer-col-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: start;
+  gap: 40px;
+}
+
+.footer-col h3, 
+.footer-col h4 {
+  font-family: var(--heading, sans-serif);
+  color: #1a1a1a;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-logo {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+.footer-desc, 
+.footer-col p {
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--, #ffffff);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border, #2e303a);
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 16px 16px;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+}

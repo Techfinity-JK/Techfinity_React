@@ -1,0 +1,545 @@
+/* ==========================================================================
+   1. HERO SECTION (Light Mode)
+   ========================================================================== */
+.hero-container {
+  width: 100%;
+  padding: 60px 24px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.hero-container-o {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  color: #08060d; /* High-contrast dark title */
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #524d5b; /* Soft dark body text */
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-buttons a:first-child {
+  background-color: var(--accent, #aa3bff);
+  color: #ffffff;
+}
+
+.hero-buttons a:first-child:hover {
+  opacity: 0.9;
+}
+
+.hero-buttons a:last-child {
+  background-color: #f4f3ec;
+  color: #08060d;
+  border: 1px solid #e5e4e7;
+}
+
+.hero-buttons a:last-child:hover {
+  border-color: var(--accent, #aa3bff);
+  background-color: #eae9e2;
+}
+
+.hero-video {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e4e7;
+}
+
+.hero-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   2. BENEFITS SECTION (Light Mode)
+   ========================================================================== */
+.benefits-container {
+  width: 100%;
+  padding: 80px 24px;
+  background-color: #f9f8f6;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-card {
+  background: #ffffff;
+  border: 1px solid #e5e4e7;
+  border-radius: 16px;
+  padding: 36px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.benefits-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.benefits-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.benefits-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #e5e4e7;
+  background: #f4f3ec;
+  color: #524d5b;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.benefits-btn:hover,
+.benefits-btn.active {
+  background: var(--accent, #aa3bff);
+  color: #ffffff;
+  border-color: var(--accent, #aa3bff);
+}
+
+.benefits-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #08060d;
+}
+
+/* ==========================================================================
+   3. WHY CHOOSE US SECTION (Light Mode)
+   ========================================================================== */
+.why-choose-us-container {
+  max-width: 1200px;
+  margin: 0px;
+  padding: 80px 74px;
+}
+
+.why-choose-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  gap: 24px;
+  text-align: left;
+}
+
+.why-choose-us-header span {
+  color: var(--accent, #aa3bff);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.why-choose-us-header p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #08060d;
+  margin-top: 8px;
+}
+
+.why-choose-us-text {
+  max-width: 500px;
+  color: #524d5b;
+  line-height: 1.6;
+}
+
+.why-choose-us-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.why-choose-us-cards-div {
+  background: #ffffff;
+  border: 1px solid #e5e4e7;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.why-choose-us-cards-div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.why-choose-us-cards-div h3 {
+  font-size: 1.25rem;
+  color: #08060d;
+  margin: 16px 0 12px;
+}
+
+.why-choose-us-cards-div p {
+  color: #524d5b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.why-choose-us-warranty {
+  background: #ffffff;
+  border: 1px solid rgba(170, 59, 255, 0.25);
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.why-choose-us-warranty-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.why-choose-us-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.why-choose-us-warranty-icon {
+  color: var(--accent, #aa3bff);
+}
+
+.why-choose-us-warranty-text p:first-child {
+  font-weight: 600;
+  color: #08060d;
+  font-size: 1.05rem;
+}
+
+.why-choose-us-warranty-text p:last-child {
+  color: #524d5b;
+  font-size: 0.9rem;
+}
+
+.why-choose-us-warranty a {
+  background: var(--accent, #aa3bff);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.why-choose-us-warranty a:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   4. CLIENTS & INFINITE SCROLL SECTION (Light Mode)
+   ========================================================================== */
+.clients-container {
+  padding: 80px 24px;
+  background: #f7f6f2;
+  border-top: 1px solid #e5e4e7;
+  border-bottom: 1px solid #e5e4e7;
+  text-align: center;
+}
+
+.trusted-by-organizations span {
+  color: var(--accent, #aa3bff);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.trusted-by-organizations p:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #08060d;
+  margin: 8px 0;
+}
+
+.trusted-by-organizations p:nth-child(3) {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #524d5b;
+  line-height: 1.6;
+}
+
+/* Infinite Scroll Carousel */
+.infinite-scroll {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 20px 0;
+}
+
+.scroll-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: max-content;
+  animation: scrollInfinite 25s linear infinite;
+}
+
+.scroll-content img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.scroll-content img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scrollInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.trusted-by-over p:nth-child(1) { color: #524d5b; }
+.trusted-by-over p:nth-child(2) {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent, #aa3bff);
+  margin: 4px 0;
+}
+.trusted-by-over p:nth-child(3) { color: #524d5b; }
+
+/* ==========================================================================
+   5. TRUSTED BRANDS PORTFOLIO SECTION (Light Mode)
+   ========================================================================== */
+.trusted-brands-container {
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0px;
+  padding: 80px 74px;
+}
+
+
+.trusted-brands-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: flex-end;
+  text-align: left;
+}
+
+.trusted-brands-header-left {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.trusted-brands-header-left span {
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.trusted-brands-header-left h2 {
+  font-size: 2.25rem;
+  color: #08060d;
+  margin-top: 8px;
+  text-align: start;
+}
+
+.trusted-brands-header-left h2 span {
+  font-size: 2.25rem;
+  color: var(--primary-color);
+}
+
+.trusted-brands-header-right p {
+  color: #524d5b;
+  line-height: 1.6;
+}
+
+.trusted-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.trusted-brands-grid .card {
+  background: #ffffff;
+  border: 1px solid #e5e4e7;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trusted-brands-grid .card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent, #aa3bff);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.trusted-brands-card-logo {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.trusted-brands-card-logo img {
+  max-height: 100%;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+.trusted-brands-card-p1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #08060d;
+}
+
+.trusted-brands-card-p2 {
+  font-size: 0.85rem;
+  color: var(--accent, #aa3bff);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.trusted-brands-card-p3 {
+  font-size: 0.9rem;
+  color: #524d5b;
+  line-height: 1.5;
+}
+
+.trusted-brands-end {
+  background: #f4f3ec;
+  border: 1px solid #e5e4e7;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trusted-brands-end-p1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #08060d;
+}
+
+.trusted-brands-end-p2 {
+  color: #524d5b;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.trusted-brands-end-a {
+  background: var(--accent, #aa3bff);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.trusted-brands-end-a:hover {
+  opacity: 0.9;
+}
+
+.why-choose-us-container {
+    background-color: var(--primary-color);
+}
+
+.why-choose-us-header p, .why-choose-us-text p {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 900px) {
+  .hero-container-o,
+  .why-choose-us,
+  .trusted-brands-header {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .why-choose-us-warranty,
+  .trusted-brands-end {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Maintain mobile responsiveness so cards don't get squished on small screens */
+@media (max-width: 900px) {
+  .trusted-brands-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .trusted-brands-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile phones */
+  }
+}
