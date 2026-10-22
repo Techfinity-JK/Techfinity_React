@@ -1,0 +1,130 @@
+/* ==========================================================================
+   CONTACT US PAGE STYLES (Light Mode)
+   ========================================================================== */
+.contact-us-page {
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+  padding-bottom: 80px;
+}
+
+.contact-header {
+  padding: 60px 24px 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-header h1 {
+  font-size: 2.75rem;
+  color: #000000;
+  margin: 12px 0 16px;
+  line-height: 1.2;
+}
+
+.contact-header h1 .highlight {
+  color: var(--primary-color, #aa3bff);
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left Column: 2x2 Info Cards Grid */
+.contact-info-column {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 20px;                             /* Space between the cards */
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+}
+
+.contact-info-card {
+  height: 200px;
+  background: #f7f6f2;
+  border: 1px solid var(--border, #e5e4e7);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column; /* Stack icon/title nicely in a grid box */
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent, #aa3bff);
+}
+
+.contact-icon-box {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-card h3 {
+  font-size: 1.05rem;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.contact-info-card p {
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* Right Column: Contact Form Container Wrapper */
+.contact-form-column {
+  background: #ffffff;
+  border: 1px solid var(--border, #e5e4e7);
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Stack info grid and form on medium-large screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info-column {
+    grid-template-columns: 1fr; /* Stack the 4 cards into 1 column on mobile phones */
+  }
+  
+  .contact-header h1 {
+    font-size: 2.2rem;
+  }
+}

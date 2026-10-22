@@ -43,12 +43,11 @@ sales@techfinity.ph
             </div>
 
             <div className="footer-col">
-            <h4>Quick Links</h4>
+            <h4>Contact Us</h4>
             <ul className="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Get a Quote</a></li>
+                <li><a href="#about">Support</a></li>
+                <li><a href="#services">Site Survey</a></li>
             </ul>
             </div>
 

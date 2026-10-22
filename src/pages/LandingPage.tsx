@@ -1,5 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './LandingPage.css';
+
+import AndoksClient from '../assets/companies/andoks.png';
+import AUBClient from '../assets/companies/aub.png';
+import IdealVisionClient from '../assets/companies/idealvision.png';
+import JoyNostalgClient from '../assets/companies/joynostalg.png';
+import JoyRideClient from '../assets/companies/joyride.png';
+import MicrosourcingClient from '../assets/companies/microsourcing.png';
+import MrKimbobClient from '../assets/companies/mrkimbob.png';
+import PuyatSteelClient from '../assets/companies/puyatsteel.jpg';
+import SalesRainClient from '../assets/companies/salesrain.png';
+import SaversClient from '../assets/companies/savers.png';
+import SbarroClient from '../assets/companies/sbarro.png';
+
 import ZktecoLogo from '../assets/logos/zkteco.png';
 import GrandingLogo from '../assets/logos/granding.png';
 import LoockLogo from '../assets/logos/loock.png';
@@ -8,63 +21,51 @@ import HikvisionLogo from '../assets/logos/hikvision.png';
 import HitiLogo from '../assets/logos/hiti.png';
 import HeroVid from '../assets/videos/herovid.mp4';
 
-interface BenefitItem {
-  id: string;
-  label: string;
-  image: string;
-  bgImage: string;
-  text: React.ReactNode;
-}
-
-const benefitData: BenefitItem[] = [
-  {
-    id: 'warranty',
-    label: 'Warranty',
-    image: '/images/benefits/warranty.png',
-    bgImage: '/images/backgrounds/biometricbackground.png',
-    text: (
-      <>
-        Up to <b>3 years warranty</b> lets you worry about everything else but the device.
-      </>
-    ),
-  },
-  {
-    id: 'support',
-    label: 'Support',
-    image: '/images/benefits/aftersalessupport.png',
-    bgImage: '/images/backgrounds/aftersalessupportbackground.png',
-    text: (
-      <>
-        After sales support is <b>always open</b> for our clients for free.
-      </>
-    ),
-  },
-  {
-    id: 'orientation',
-    label: 'Orientation',
-    image: '/images/benefits/virtualuserorientation.png',
-    bgImage: '/images/backgrounds/virtualuserorientationbackground.png',
-    text: (
-      <>
-        User Orientation for <b>"How to use"</b> the device is <b>free</b> after purchase.
-      </>
-    ),
-  },
-  {
-    id: 'delivery',
-    label: 'Delivery',
-    image: '/images/benefits/freedelivery.png',
-    bgImage: '/images/backgrounds/deliverybackground.png',
-    text: (
-      <>
-        <b>Free</b> delivery for purchases above 10,000php within <b>Metro Manila.</b>
-      </>
-    ),
-  },
+// List of imported client logos
+const clientLogos = [
+  { src: JoyRideClient, alt: 'Joyride' },
+  { src: IdealVisionClient, alt: 'Ideal Vision' },
+  { src: MicrosourcingClient, alt: 'Microsourcing' },
+  { src: PuyatSteelClient, alt: 'Puyat Steel' },
+  { src: AUBClient, alt: 'AUB' },
+  { src: SalesRainClient, alt: 'Salesrain' },
+  { src: MrKimbobClient, alt: 'Mr. Kimbob' },
+  { src: AndoksClient, alt: 'Andoks' },
+  { src: SbarroClient, alt: 'Sbarro' },
+  { src: SaversClient, alt: 'Savers' },
+  { src: JoyNostalgClient, alt: 'Joy Nostalg' },
 ];
 
 export const LandingPage: React.FC = () => {
-  const [activeBenefit, setActiveBenefit] = useState<BenefitItem>(benefitData[0]);
+  const scrollContentRef = useRef<HTMLDivElement>(null);
+
+  // Infinite Scroll Animation Effect
+  useEffect(() => {
+    const content = scrollContentRef.current;
+    if (!content) return;
+
+    let pos = 0;
+    const speed = 1.5; // pixels per frame
+    let animationFrameId: number;
+
+    const step = () => {
+      pos += speed;
+
+      // When scrolled half the width (the cloned set), reset to loop seamlessly
+      if (pos >= content.scrollWidth / 2 + 10) {
+        pos = 0;
+      }
+
+      content.style.transform = `translateX(${-pos}px)`;
+      animationFrameId = requestAnimationFrame(step);
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   return (
     <>
@@ -96,37 +97,6 @@ export const LandingPage: React.FC = () => {
               playsInline
               width="100%"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Dynamic Benefits Section */}
-      <section
-        id="backgroundSection"
-        className="benefits-container"
-        style={{ backgroundImage: `url(${activeBenefit.bgImage})` }}
-      >
-        <div className="benefits-card">
-          <div className="benefits-image">
-            <img
-              id="benefitsImage"
-              src={activeBenefit.image}
-              alt={activeBenefit.label}
-            />
-          </div>
-          <div className="benefits-buttons">
-            {benefitData.map((item) => (
-              <button
-                key={item.id}
-                className={`benefits-btn ${activeBenefit.id === item.id ? 'active' : ''}`}
-                onClick={() => setActiveBenefit(item)}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-          <div className="benefits-text">
-            <p id="benefitsText">{activeBenefit.text}</p>
           </div>
         </div>
       </section>
@@ -189,7 +159,7 @@ export const LandingPage: React.FC = () => {
                 padding: '12px',
                 alignItems: 'center',
                 borderRadius: '0.5rem',
-                width: 'fit-content'
+                width: 'fit-content',
               }}
             >
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -214,7 +184,7 @@ export const LandingPage: React.FC = () => {
                 padding: '12px',
                 alignItems: 'center',
                 borderRadius: '0.5rem',
-                width: 'fit-content'
+                width: 'fit-content',
               }}
             >
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -258,18 +228,11 @@ export const LandingPage: React.FC = () => {
         </div>
 
         <div className="infinite-scroll">
-          <div className="scroll-content" id="scrollContent">
-            <img src="/images/clients/joyride.png" alt="Joyride" />
-            <img src="/images/clients/idealvision.png" alt="Ideal Vision" />
-            <img src="/images/clients/microsourcing.png" alt="Microsourcing" />
-            <img src="/images/clients/puyatsteel.jpg" alt="Puyat Steel" />
-            <img src="/images/clients/aub.png" alt="AUB" />
-            <img src="/images/clients/salesrain.png" alt="Salesrain" />
-            <img src="/images/clients/mrkimbob.png" alt="Mr. Kimbob" />
-            <img src="/images/clients/andoks.png" alt="Andoks" />
-            <img src="/images/clients/sbarro.png" alt="Sbarro" />
-            <img src="/images/clients/savers.png" alt="Savers" />
-            <img src="/images/clients/joynostalg.png" alt="Joy Nostalg" />
+          <div className="scroll-content" ref={scrollContentRef}>
+            {/* Render array twice back-to-back for seamless cloning */}
+            {[...clientLogos, ...clientLogos].map((client, index) => (
+              <img key={index} src={client.src} alt={client.alt} />
+            ))}
           </div>
         </div>
 
@@ -369,7 +332,7 @@ export const LandingPage: React.FC = () => {
             <div>
               <p className="trusted-brands-end-p1">Don't see your preferred brand?</p>
               <p className="trusted-brands-end-p2">
-                We work with 30+ manufacturers. Contact us and we'll source the device you need.
+                We work with 10+ manufacturers. Contact us and we'll source the device you need.
               </p>
             </div>
             <a className="trusted-brands-end-a" href="/contact-us">

@@ -1,0 +1,232 @@
+/* ==========================================================================
+   ABOUT US PAGE STYLES (Light Theme)
+   ========================================================================== */
+.about-us-page {
+  width: 100%;
+  background: var(--bg, #ffffff);
+  color: var(--text, #524d5b);
+}
+
+.about-us-header {
+  background-color: #ffffff;
+  padding: 60px 0px;
+  margin: 0 auto;
+}
+
+.about-us-container-o {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.about-us-content {
+  text-align: left;
+}
+
+.about-us-content h1, .about-us-content p{
+  color:#000000;
+}
+
+.highlight,
+.highlight-2 {
+  color: var(--primary-color);
+}
+
+.who-we-are-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.who-we-are-btn p {
+  white-space: nowrap;
+}
+
+.who-we-are-btn:hover {
+  opacity: 0.9;
+}
+
+.about-img img {
+  height: 70vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+/* Stats Counter Grid */
+.about-us-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 48px;
+  padding: 32px;
+  background: #f7f6f2;
+  text-align: center;
+  border-top: #c9c9c9 1px solid;
+  border-bottom: #c9c9c9 1px solid;
+}
+
+.about-us-stats > div {
+    padding: 20px 64px;
+    border-right: #c9c9c9 1px solid;
+}
+
+.about-us-stats > div:last-child {
+    border-right: none;
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-content p {
+  color: #000000;
+}
+
+.stats-number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.stats-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+/* Core Values Section */
+.core-values-container {
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 80px 0px;
+}
+
+.core-values-container-o {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 48px;
+  padding: 0px 74px;
+}
+
+.about-us-container-o,
+.values-container-o {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.values-container-o {
+  text-align: left;
+  padding: 0px 74px;
+}
+
+.values-container-o p{
+  color: #000000;
+}
+
+
+.about-buttons {
+  margin-top: 20px;
+}
+
+.about-buttons p{
+  color: #ffffff;
+}
+
+.values-container-o-h1 {
+  font-size: 2.25rem;
+  color: #000000;
+  line-height: 1.25;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.value-card {
+  background: #ffffff;
+  border: 1px solid var(--border, #e5e4e7);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.stats-item-icon-container {
+  display: inline-flex;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.value-card h3 {
+  font-size: 1.2rem;
+  color: var(--text-h, #08060d);
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text, #524d5b);
+}
+
+.core-number {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Floating Messenger Button */
+.message-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #0084ff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+  z-index: 1000;
+}
+
+.message-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .about-us-container-o,
+  .values-container-o {
+    grid-template-columns: 1fr;
+  }
+}
