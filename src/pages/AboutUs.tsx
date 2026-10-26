@@ -44,7 +44,7 @@ export const AboutUs: React.FC = () => {
         </div>
 
         {/* Key Metrics / Stats Bar */}
-        <div className="about-us-stats">
+        <div className="about-us-stats gray-card">
           <div className="stats-item">
             <p className="stats-number">200+</p>
             <p className="stats-label">PROJECTS LAUNCHED</p>
@@ -92,7 +92,7 @@ export const AboutUs: React.FC = () => {
         </div>
 
         {/* 4 Core Pillars */}
-        <div className="about-us-stats">
+        <div className="about-us-stats gray-card">
           <div className="stats-item">
             <div className="stats-item-icon-container">
               <svg

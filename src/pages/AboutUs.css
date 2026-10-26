@@ -9,7 +9,7 @@
 
 .about-us-header {
   background-color: #ffffff;
-  padding: 60px 0px;
+  padding-top: 60px;
   margin: 0 auto;
 }
 
@@ -117,7 +117,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
   padding: 0px 74px;
 }
 

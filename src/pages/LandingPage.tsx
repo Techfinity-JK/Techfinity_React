@@ -150,7 +150,7 @@ export const LandingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="why-choose-us-cards-div">
+          <div className="why-choose-us-cards-div gray-card">
             <div
               className="w-12 h-12 rounded-sm flex items-center justify-center mb-6"
               style={{

@@ -170,7 +170,7 @@
 }
 
 .why-choose-us-header span {
-  color: var(--accent, #aa3bff);
+  color: #ffffff;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -287,7 +287,7 @@
    4. CLIENTS & INFINITE SCROLL SECTION (Light Mode)
    ========================================================================== */
 .clients-container {
-  padding: 80px 24px;
+  padding: 80px 74px;
   background: #f7f6f2;
   border-top: 1px solid #e5e4e7;
   border-bottom: 1px solid #e5e4e7;
@@ -317,12 +317,26 @@
 
 /* Infinite Scroll Carousel */
 .infinite-scroll {
+  /* Keep your existing overflow and positioning styles here */
   overflow: hidden;
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  padding: 20px 0;
+  
+  /* --- Add these lines for the fade effect --- */
+  -webkit-mask-image: linear-gradient(
+    to right, 
+    transparent, 
+    black 15%, 
+    black 85%, 
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right, 
+    transparent, 
+    black 15%, 
+    black 85%, 
+    transparent
+  );
 }
 
 .scroll-content {
@@ -348,6 +362,7 @@
 }
 
 .trusted-by-over{
+  margin-top: 40px;
   line-height: 1.6;
 }
 
@@ -473,8 +488,8 @@
 }
 
 .trusted-brands-end {
-  background: #ecedf4;
-  border: 1px solid #e5e4e7;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 32px;
   display: flex;

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './FillForm.css';
 
@@ -6,6 +7,7 @@ export const FillForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const navigate = useNavigate(); // Initialize router navigation
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -15,17 +17,18 @@ export const FillForm: React.FC = () => {
     setStatus('Sending...');
 
     // Replace these with your actual EmailJS credentials or environment variables
-    const SERVICE_ID = 'your_service_id';
-    const TEMPLATE_ID = 'your_template_id';
-    const PUBLIC_KEY = 'your_public_key';
+    const SERVICE_ID = 'service_gsitdn9';
+    const TEMPLATE_ID = 'template_p1vimcp';
+    const PUBLIC_KEY = 'xxKS0v3FAYc4MwLgb';
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
       .then(
         () => {
-          setStatus('Message sent successfully!');
           setIsSubmitting(false);
           formRef.current?.reset();
+          // Redirect to the form submitted / thank you page on success
+          navigate('/form-submitted');
         },
         (error) => {
           setStatus('Failed to send message, please try again.');

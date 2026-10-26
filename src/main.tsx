@@ -8,11 +8,15 @@ import FillForm from './components/FillForm';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
-
 // Import Pages
 import LandingPage from './pages/LandingPage';
 import AboutUs from './pages/AboutUs';
+import Biometrics from './pages/Biometrics';
+import DoorAccess from './pages/DoorAccess';
+import WalkthroughScanners from './pages/WalkthroughScanners';
 import ContactUs from './pages/ContactUs';
+import Documentation from './pages/Documentation';
+import FormSubmitted from './pages/FormSubmitted';
 
 // Import Global Styles
 import './index.css';
@@ -28,7 +32,12 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/products/biometrics" element={<Biometrics />} />
+        <Route path="/products/door-access" element={<DoorAccess />} />
+        <Route path="/products/walkthrough-scanners" element={<WalkthroughScanners />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/documentation" element={<Documentation />} />
+        <Route path="/form-submitted" element={<FormSubmitted />} />
       </Routes>
 
       <FillForm />

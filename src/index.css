@@ -126,3 +126,8 @@ code {
     font-weight: 700;
     letter-spacing: 1.5px;
 }
+
+.gray-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}

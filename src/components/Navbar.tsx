@@ -3,22 +3,11 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import TechfinityLogo from '../assets/logos/TechfinityLogo.png';
 
-interface NavItem {
-  label: string;
-  to: string;
-}
-
-const navItems: NavItem[] = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about-us' },
-  { label: 'Products', to: '/products' },
-  { label: 'Contact', to: '/contact-us' },
-];
-
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
@@ -80,7 +69,7 @@ export const Navbar: React.FC = () => {
         <div className="navbar-content-background">
           <div className="navbar-content">
             {/* Logo */}
-            <Link to="/" className="navbar-logo">
+            <Link to="/" className="navbar-logo" onClick={closeMenu}>
               <img className="techfinity-logo" src={TechfinityLogo} alt="Techfinity Logo" />
             </Link>
 
@@ -97,22 +86,64 @@ export const Navbar: React.FC = () => {
 
             {/* Navigation Links */}
             <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-              {navItems.map((item) => (
-                <li key={item.label} className="nav-item">
-                  <Link
-                    to={item.to}
-                    className="nav-link"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              <li className="nav-item">
+                <Link to="/" className="nav-link" onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/about-us" className="nav-link" onClick={closeMenu}>
+                  About
+                </Link>
+              </li>
+
+              {/* Products Dropdown */}
+              <li className="nav-item dropdown">
+                <Link to="/products" className="nav-link dropdown-toggle" onClick={closeMenu}>
+                  Products
+                </Link>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/products/biometrics" onClick={closeMenu}>
+                      Biometrics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/products/door-access" onClick={closeMenu}>
+                      Door Access
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/products/walkthrough-scanners" onClick={closeMenu}>
+                      Walkthrough Scanners
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/products/smart-locks" onClick={closeMenu}>
+                      Smart Locks
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/contact-us" className="nav-link" onClick={closeMenu}>
+                  Contact
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/documentation" className="nav-link" onClick={closeMenu}>
+                  Documentation
+                </Link>
+              </li>
+
               <li className="nav-item nav-quote-item">
                 <p>
                   Call <b>0946 336 0774</b> or
                 </p>
-                <Link to="/contact-us" className="nav-btn" onClick={() => setIsOpen(false)}>
+                <Link to="/contact-us" className="nav-btn" onClick={closeMenu}>
                   Get a Quotation
                 </Link>
               </li>
