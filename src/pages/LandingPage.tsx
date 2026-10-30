@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './LandingPage.css';
 
 import AndoksClient from '../assets/companies/andoks.png';

@@ -100,7 +100,7 @@ export const Navbar: React.FC = () => {
 
               {/* Products Dropdown */}
               <li className="nav-item dropdown">
-                <Link to="/products" className="nav-link dropdown-toggle" onClick={closeMenu}>
+                <Link to="/products/biometrics" className="nav-link dropdown-toggle" onClick={closeMenu}>
                   Products
                 </Link>
                 <ul className="dropdown-menu">
@@ -143,7 +143,7 @@ export const Navbar: React.FC = () => {
                 <p>
                   Call <b>0946 336 0774</b> or
                 </p>
-                <Link to="/contact-us" className="nav-btn" onClick={closeMenu}>
+                <Link to="/get-a-quotation" className="nav-btn" onClick={closeMenu}>
                   Get a Quotation
                 </Link>
               </li>

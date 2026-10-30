@@ -17,7 +17,7 @@ interface ProductItem {
   alt: string;
   description: string;
 }
-const doorAccessProducts: ProductItem[] = [
+const walkthroughScannerProducts: ProductItem[] = [
   {
     id: 'zk-d1090',
     name: 'ZK-D1090',
@@ -50,7 +50,7 @@ const doorAccessProducts: ProductItem[] = [
   },
 ];
 
-export const DoorAccess: React.FC = () => {
+export const walkthroughScanner: React.FC = () => {
   return (
     <div className="products-page">
       <section className="page-header">
@@ -60,7 +60,7 @@ export const DoorAccess: React.FC = () => {
 
       <section className="door-access-cards-container">
         <div className="product-grid">
-          {doorAccessProducts.map((product) => (
+          {walkthroughScannerProducts.map((product) => (
             <a href="/contact-us" key={product.id} className="product-card-link">
               <div className="product-card">
                 <div className="product-header">
@@ -91,4 +91,4 @@ export const DoorAccess: React.FC = () => {
   );
 };
 
-export default DoorAccess;
+export default walkthroughScanner;

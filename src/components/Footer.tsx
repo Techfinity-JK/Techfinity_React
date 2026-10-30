@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import TechfinityLogo from '../assets/logos/TechfinityLogo.png';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ export const Footer: React.FC = () => {
             </a>
           <p className="footer-desc">
             Unit 422 J&T Bldg 3894 Ramon
-Magsaysay Blvd Sta. Mesa Manila
+Magsaysay Blvd Sta. Mesa Manila <br />
 (02) 8404-5627 | 0946 336 0774
 sales@techfinity.ph
           </p>
@@ -25,29 +26,28 @@ sales@techfinity.ph
             <div className="footer-col">
             <h4>Quick Links</h4>
             <ul className="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about-us">About Us</Link></li>
+                <li><Link to="/contact-us">Contact</Link></li>
+                <li><Link to="/documentation">Documentation</Link></li>
             </ul>
             </div>
 
             <div className="footer-col">
             <h4>Our Products</h4>
             <ul className="footer-links">
-                <li><a href="#home">Biometrics</a></li>
-                <li><a href="#about">Door Access</a></li>
-                <li><a href="#services">CCTV</a></li>
-                <li><a href="#contact">Metal Detector</a></li>
+                <li><Link to="/products/biometrics">Biometrics</Link></li>
+                <li><Link to="/products/door-access">Door Access</Link></li>
+                <li><Link to="/products/walkthrough-scanners">Walkthrough Scanners</Link></li>
+                <li><Link to="/products/smart-locks">Smart Locks</Link></li>
             </ul>
             </div>
 
             <div className="footer-col">
             <h4>Contact Us</h4>
             <ul className="footer-links">
-                <li><a href="#home">Get a Quote</a></li>
-                <li><a href="#about">Support</a></li>
-                <li><a href="#services">Site Survey</a></li>
+                <li><Link to="/get-a-quotation">Get a Quotation</Link></li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
             </ul>
             </div>
 

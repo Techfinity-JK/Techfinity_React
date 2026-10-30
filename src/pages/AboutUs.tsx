@@ -175,22 +175,6 @@ export const AboutUs: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Messenger Floating Action Button */}
-      <a
-        href="https://www.facebook.com/profile.php?id=61551208128036"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="message-btn"
-        aria-label="Message us on Facebook"
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 2C6.477 2 2 6.145 2 11.243C2 14.054 3.358 16.555 5.5 18.188V22L9.172 19.89C10.088 20.131 11.041 20.257 12 20.257C17.523 20.257 22 16.112 22 11.014C22 5.917 17.523 2 12 2ZM13 14L10 10.5L4.5 14L10.5 7.5L13.5 11L19 7.5L13 14Z"
-            fill="white"
-          />
-        </svg>
-      </a>
     </div>
   );
 };

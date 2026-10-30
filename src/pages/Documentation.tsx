@@ -111,9 +111,7 @@ export const DocumentationPage: React.FC = () => {
     <div className="documentation-container">
       {/* Hero Section */}
       <section className="demo-hero">
-        <div className="header-chip">
-          <p>Video Tutorial Hub</p>
-        </div>
+        <span className="eyebrow">TUTORIAL RECORDINGS</span>
         <h1>Documentation Archives</h1>
         <p className="demo-hero-p">Scan any QR code with your phone camera to instantly open the corresponding YouTube tutorial for your device — no typing required.</p>
       </section>
