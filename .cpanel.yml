@@ -2,4 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/techfini/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/npm install
+    - /bin/npm run build
+    - /bin/rsync -a --delete dist/ $DEPLOYPATH
