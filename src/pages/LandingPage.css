@@ -155,7 +155,6 @@
    3. WHY CHOOSE US SECTION (Light Mode)
    ========================================================================== */
 .why-choose-us-container {
-  max-width: 1200px;
   margin: 0px;
   padding: 80px 74px;
 }
@@ -386,7 +385,6 @@
    ========================================================================== */
 .trusted-brands-container {
   background-color: #ffffff;
-  max-width: 1200px;
   margin: 0px;
   padding: 80px 74px;
 }
@@ -568,5 +566,58 @@
 @media (max-width: 600px) {
   .trusted-brands-grid {
     grid-template-columns: 1fr; /* 1 column on mobile phones */
+  }
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE FIXES FOR WARRANTY BOX
+   ========================================================================== */
+
+/* Tablet & Mobile (<= 900px) */
+@media (max-width: 900px) {
+  .why-choose-us-container {
+    padding: 60px 24px; /* Reduced container padding to prevent horizontal scrolling */
+  }
+
+  .why-choose-us-warranty {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .why-choose-us-warranty a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Small Mobile Phones (<= 600px) */
+@media (max-width: 600px) {
+  .why-choose-us-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .why-choose-us-warranty-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .why-choose-us-warranty-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .why-choose-us-warranty-text p:first-child {
+    font-size: 1rem;
+  }
+
+  .why-choose-us-warranty-text p:last-child {
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 }
