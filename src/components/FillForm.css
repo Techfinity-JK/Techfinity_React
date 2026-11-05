@@ -105,3 +105,20 @@
   color: var(--text-h, #08060d);
   text-align: center;
 }
+
+/* Small Mobile Phones (<= 600px) */
+@media (max-width: 600px) {
+
+.contacts-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.contacts-card-p {
+  text-align: left;
+}
+
+}

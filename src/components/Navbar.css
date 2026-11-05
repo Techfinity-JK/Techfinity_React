@@ -199,6 +199,13 @@
 }
 
 @media (max-width: 1088px) {
+/* Add this anywhere in your CSS */
+.hide-on-mobile {
+  display: flex;
+}
+
+/* Update your existing max-width: 1088px media query block */
+@media (max-width: 1088px) {
   .hamburger {
     display: flex;
   }
@@ -218,12 +225,17 @@
     left: 0;
   }
 
-.pre-navbar {
+  .pre-navbar {
     flex-direction: column;
     align-items: center; 
     text-align: center;
-    gap: 10px;      
-    padding: 6px 0;
+    gap: 10px;       
+    padding: 6px 12px;
+  }
+
+  /* Hide the email and address links on mobile views */
+  .hide-on-mobile {
+    display: none !important;
   }
 
   .pre-navbar a {
@@ -232,4 +244,27 @@
     width: 100%;
   }
 
+  .why-choose-us-warranty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .why-choose-us-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center !important;
+  }
 }
+
+}
+
+@media (max-width: 600px) {
+  
+  .hide-on-mobile {
+  display: none !important;
+  }
+}
+
+

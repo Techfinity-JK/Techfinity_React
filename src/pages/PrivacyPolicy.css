@@ -48,14 +48,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
-.quotation-button-group {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  width: 100%;
-  justify-content: center;
-}
-
 .quotation-messenger-button:hover{
 background-color: #2c6eac;
   transform: translateY(-2px);
@@ -209,4 +201,17 @@ background-color: #9d1cff;
   .contact-header h1 {
     font-size: 2.2rem;
   }
+}
+
+/* Small Mobile Phones (<= 600px) */
+@media (max-width: 600px) {
+
+.get-quotation-card {
+  width: 100%;
+  max-width: fit-content;
+
+}
+
+
+
 }

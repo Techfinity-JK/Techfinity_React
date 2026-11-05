@@ -120,6 +120,7 @@
 }
 
 @media (max-width: 600px) {
+  
   .contact-info-column {
     grid-template-columns: 1fr; /* Stack the 4 cards into 1 column on mobile phones */
   }

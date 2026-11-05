@@ -224,6 +224,10 @@ background-color: #222222;
 }
 
 @media (max-width: 600px) {
+  
+  .quotation-button-group {
+    flex-direction: column; /* Stack buttons vertically on mobile phones */
+  }
   .contact-info-column {
     grid-template-columns: 1fr; /* Stack the 4 cards into 1 column on mobile phones */
   }
